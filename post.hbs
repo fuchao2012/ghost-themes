@@ -13,7 +13,7 @@
 					
 					<span class="post-author">{{author}}</span> | <span class="post-date">{{date format="DD MMM YYYY"}}
                     <span class="post-reading-time">| <span class="estimated-reading-time"></span> (<span
-                            class="word-count"></span> words)</span></span>
+                            class="word-count"></span> words)</span></span> |
 					<a href="{{url}}#disqus_thread">Comments</a>
 				</span>
                 <div class="clear"></div>
@@ -46,6 +46,22 @@
 
             <aside class="post-comments">
                 <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    var disqus_shortname = 'ikangfe'; // required: replace example with your forum shortname
+                    var disqus_identifier = '{{post.id}}';
+
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function () {
+                        var dsq = document.createElement('script');
+                        dsq.type = 'text/javascript';
+                        dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+                    Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
             </aside>
 
         </div>
@@ -77,22 +93,7 @@
         </nav>
 
 {{/post}}
-    <script type="text/javascript">
-        var disqus_shortname = 'ikangfe'; // required: replace example with your forum shortname
-        var disqus_identifier = '{{post.id}}';
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-        Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div>
 </article>
 </main>
